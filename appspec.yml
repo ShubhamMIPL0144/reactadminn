@@ -1,0 +1,13 @@
+version: 0.0
+os: linux
+files:
+  # Copy all files from the source directory (in the ZIP) to the target directory on the EC2 instance
+  - source: /                # Root directory of the ZIP file
+    destination: /home/ubuntu/build/  # Destination on the EC2 instance
+
+# Hooks to run the script during the deployment process
+hooks:
+  BeforeInstall:
+    - location: scripts/deploy.sh
+      runas: ubuntu
+

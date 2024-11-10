@@ -1,0 +1,21 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+    - echo "Installing dependencies"
+    - apt-get update && apt-get install -y zip  # Install zip utility
+    - npm install --legacy-peer-deps
+  build:
+    commands:
+      - echo "Building the React application"
+      - npm run build
+      - echo "Creating a zip file of the build output"
+      - zip -r build.zip build/
+      - ls -la  # List files to confirm build.zip creation
+  post_build:
+    commands:
+      - echo "Checking if build.zip exists"
+      - ls -la build.zip  # Verify that the file exists
+      - echo "Uploading the zip file to S3"
+      - aws s3 cp build.zip s3://lusgo-builds/build.zip

@@ -1,0 +1,199 @@
+.card-task{
+  width: 100%;
+  float: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  /* padding: 6px !important; */
+  background: #fff;
+  box-shadow: 3px 1px 12px #0000001a;
+  border-radius: 4px;
+  margin-bottom: 6px !important;
+  cursor: move;
+  border-radius: 17px;
+  }
+
+  .img img {
+    width: 40px;
+    height: 40px;
+  }
+  .status {
+    font-size: .7rem;
+    margin-bottom: 3px;
+    color: #494949;
+  }
+  .days {
+    font-size: .9rem;
+    margin-bottom: 3px;
+    color: #151515;
+  }
+  .time {
+    font-size: .7rem;
+    margin-bottom: 3px;
+    color: #494949;
+  }
+  .card_right {
+    width: auto;
+    float: left;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .order .days {
+    background: #5e72e4;
+    color: white;
+    padding: 3px 7px;
+    border-radius: 15px 15px 1px 1px;
+  }
+
+
+  .testing .days {
+    background: #288fee;
+    color: white;
+    padding: 3px 7px;
+    border-radius: 15px 15px 1px 1px;
+  }
+
+  .publish .days {
+    background: #343a40;
+    color: white;
+    padding: 3px 7px;
+    border-radius: 15px 15px 1px 1px;
+  }
+
+  .status {
+    color: #494949;
+    border-radius: 18px;
+    font-weight: 500;
+    font-size: .78rem;
+  }
+  .done .days {
+    background: #2dce89;
+    color: white;
+    padding: 3px 7px;
+    border-radius: 15px 15px 1px 1px;
+  }
+  .pending .days {
+    background: #f5365c;
+    color: white;
+    padding: 3px 7px;
+    border-radius: 15px 15px 1px 1px;
+    /* margin: 0px 0px; */
+  }
+  .waiting .days {
+    background: #fb6340;
+    color: white;
+    padding: 3px 7px;
+    border-radius: 15px 15px 1px 1px;
+  }
+  .App {
+    font-family: sans-serif;
+    text-align: center;
+    background: #fbfcfd;
+    height: 100vh;
+    padding: 40px 0px;
+  }
+  h4 {
+    font-family: sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-top: 0px;
+    margin-bottom: 3px;
+    color: #416183;
+    margin: auto;
+    padding: 7px;
+  }
+  .container {
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .drag_column {
+    width: 100%;
+    float: left;
+    display: flex;
+    padding: 10px;
+  }
+  .drag_row {
+    width: 100%;
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+  }
+  .small-box {
+    width: 15%;
+    background: #f7f8fa;
+    height: max-content;
+  }
+  
+  .task {
+    border: 1px solid white;
+    margin: 10px;
+    box-shadow: 1px 3px 10px gray;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+.h-140{
+  height: 140px;
+}
+  
+  
+/* Base class for the container */
+.responsive-scroll-container {
+  overflow: auto;
+  height: 550px; /* Default height for standard screens */
+}
+
+/* Increase height for larger screens */
+
+
+@media (min-width: 1400px) {
+  .responsive-scroll-container {
+    height: 550px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .responsive-scroll-container {
+    height: 650px;
+  }
+}
+
+@media (min-width: 1800px) {
+  .responsive-scroll-container {
+    height: 750px;
+  }
+}
+
+/* @media (min-width: 1200px) {
+  .responsive-scroll-container {
+    height: 600px;
+  }
+} */
+
+/* Adjust for medium screens */
+@media (max-width: 1024px) {
+  .responsive-scroll-container {
+    height: 550px;
+  }
+}
+
+/* Adjust for small screens */
+@media (max-width: 768px) {
+  .responsive-scroll-container {
+    height: 450px;
+  }
+}
+
+/* Adjust for extra small screens */
+@media (max-width: 576px) {
+  .responsive-scroll-container {
+    height: 400px;
+  }
+}
